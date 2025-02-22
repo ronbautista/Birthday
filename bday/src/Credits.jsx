@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './Cake.scss';
+import 'animate.css';
 
 const Credits = () => {
     const [timeSurvived, setTimeSurvived] = useState('');
@@ -27,7 +29,7 @@ const Credits = () => {
 
     return (
         <div>
-            <p>Alive {timeSurvived}</p>
+            <p id='al'>Alive {timeSurvived}</p>
         </div>
     );
 };
