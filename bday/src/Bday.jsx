@@ -9,25 +9,23 @@ function Bday() {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.classList.remove("animate__tada"); // Reset animation
-          void element.offsetWidth; // Force reflow
-          element.classList.add("animate__animated", "animate__tada"); // Reapply animation
+          element.classList.remove("animate__tada"); 
+          void element.offsetWidth; 
+          element.classList.add("animate__animated", "animate__tada"); 
         }
       }, delay);
     };
 
-    // Animate text with delay
-    animateText("hbd", 500);  // "Happy Birthday!" animates after 500ms
-    animateText("hbd2", 1500); // "Ronald" animates after 1500ms
+    animateText("hbd", 500);  
+    animateText("hbd2", 1500); 
 
-    // Trigger confetti after the second text animation
     setTimeout(() => {
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
       });
-    }, 2000); // Confetti fires after 2 seconds
+    }, 2000); 
 
   }, []);
 
